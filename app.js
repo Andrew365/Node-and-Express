@@ -9,6 +9,7 @@ var passport = require('passport');
 var routes = require('./routes/index');
 var login = require('./routes/login');
 var reg = require('./routes/register');
+var help = require('./routes/help');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/login', login);
 app.use('/register', reg);
+app.use('/help', help);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
